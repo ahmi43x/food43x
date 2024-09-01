@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASHMIR FAST FOOD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR page -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">KASHMIR FAST FOOD</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li class="dropdown">
+                    <a href="#">More</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#reviews">Customer Reviews</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#loyalty">Loyalty Program</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#social">Social Media</a></li>
+                        <li><a href="#accessibility">Accessibility</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Home Page -->
+    <header id="home">
+        <div class="hero">
+            <img src="https://th.bing.com/th/id/R.024c67a513b8ac3ae1d94962f2241cac?rik=AOZa9bfrVCJcYQ&pid=ImgRaw&r=0" alt="Delicious Food">
+            <div class="cta">
+                <h1>Welcome to Kashmir Fast Food</h1>
+                <a href="#menu" class="btn">View Menu</a>
+                <a href="#order" class="btn">Order Now</a>
+            </div>
+        </div>
+        <section class="intro">
+            <h2>What Makes Us Special</h2>
+            <p>Discover our unique flavors and quality ingredients that make our fast food stand out.</p>
+        </section>
+        <section class="offers">
+            <h2>Special Offers</h2>
+            <div class="offer">
+                <img src="https://th.bing.com/th/id/R.5b903cf15be6c226df356d84a83ca7c3?rik=m7JxwYDxk0csyg&riu=http%3a%2f%2fwww.readersdigest.ca%2fwp-content%2fuploads%2f2015%2f11%2fgourmet-burger.jpg&ehk=rkRu6XYjGWaKdF%2f%2fRax0o00Xt84b6WWZbYUQ1WT0ETw%3d&risl=&pid=ImgRaw&r=0" alt="Offer 1">
+                <p>50% off on all burgers!</p>
+            </div>
+            <!-- Add more offers as needed -->
+        </section>
+    </header>
+
+   <!-- Menu -->
+<section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-categories">
+        <button onclick="filterMenu('all')" class="filter-btn active">All</button>
+        <button onclick="filterMenu('burgers')" class="filter-btn">Burgers</button>
+        <button onclick="filterMenu('sides')" class="filter-btn">Sides</button>
+        <button onclick="filterMenu('beverages')" class="filter-btn">Beverages</button>
+    </div>
+    <div class="menu-items">
+        <!-- Example Menu Item -->
+        <div class="menu-item" data-category="burgers">
+            <img src="https://th.bing.com/th/id/OIP.iUbhCi3AYzUXbmaolevBhwHaHa?rs=1&pid=ImgDetMain" alt="Burger" class="menu-img">
+            <h3>Classic Burger</h3>
+            <p>Description of the burger with delicious toppings.</p>
+            <p class="price">$5.99</p>
+        </div>
+        <div class="menu-item" data-category="sides">
+            <img src="https://th.bing.com/th/id/OIP.VU-UXU0nCMm4glgKEa86hwHaHa?w=626&h=626&rs=1&pid=ImgDetMain" alt="Fries" class="menu-img">
+            <h3>Golden Fries</h3>
+            <p>Crispy and golden fries seasoned to perfection.</p>
+            <p class="price">$2.99</p>
+        </div>
+        <div class="menu-item" data-category="beverages">
+            <img src="https://th.bing.com/th/id/OIP._eybmbMa0VvPgz0396P06QHaEo?rs=1&pid=ImgDetMain" alt="Soda" class="menu-img">
+            <h3>Refreshing Soda</h3>
+            <p>Chilled soda to quench your thirst.</p>
+            <p class="price">$1.99</p>
+
+        </div>
+        <div class="menu-item" data-category="burgers">
+            <img src="https://th.bing.com/th/id/OIP.pj9gkdfxDbpqwfcPtgwHuAHaFj?rs=1&pid=ImgDetMain" alt="Cheese Burger" class="menu-img">
+            <h3>Cheese Burger</h3>
+            <p>A delicious burger with melted cheddar cheese, crispy bacon, and BBQ sauce.</p>
+            <p class="price">$6.49</p>
+        </div>
+        <div class="menu-item" data-category="sides">
+            <img src="https://th.bing.com/th/id/R.fc6ffddbbca0c68d553751bffc53b9fe?rik=elcZ%2fuORb3Vw5Q&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1254428%2fimages%2fo-ONION-RINGS-facebook.jpg&ehk=V8iVxSNgefxTVEJXY%2bGR8LkD%2fi5SWStEgSl3wIrus0g%3d&risl=&pid=ImgRaw&r=0" alt="Onion Rings" class="menu-img">
+            <h3>Onion Rings</h3>
+            <p>Crispy, golden-brown onion rings with a tangy dipping sauce.</p>
+            <p class="price">$3.49</p>
+        </div>
+        <div class="menu-item" data-category="beverages">
+            <img src="https://th.bing.com/th/id/OIP.3-FgYbtSghwAdIryvo2uoQHaFj?rs=1&pid=ImgDetMain" alt="Iced Tea" class="menu-img">
+            <h3>Iced Tea</h3>
+            <p>Refreshing iced tea with a hint of lemon.</p>
+            <p class="price">$2.49</p>
+        </div>
+        <div class="menu-item" data-category="burgers">
+            <img src="https://th.bing.com/th/id/R.3fb05a35c27ba9aaf97e8b2592c855bf?rik=zlE7yIkYtPvozQ&pid=ImgRaw&r=0" alt="Bacon Burger" class="menu-img">
+            <h3>Bacon Burger</h3>
+            <p>A savory burger topped with crispy bacon and a special sauce.</p>
+            <p class="price">$6.99</p>
+        </div>
+        <div class="menu-item" data-category="sides">
+            <img src="https://th.bing.com/th/id/OIP.YjxRdCz6QqGyGskgTm8iYAAAAA?rs=1&pid=ImgDetMain" alt="Coleslaw" class="menu-img">
+            <h3>Coleslaw</h3>
+            <p>A creamy and tangy coleslaw made with fresh cabbage and carrots.</p>
+            <p class="price">$3.99</p>
+        </div>
+        <div class="menu-item" data-category="beverages">
+            <img src="https://th.bing.com/th/id/R.e2864a8aeefe9c45df73fe7ced63c122?rik=D8AGeP33dQReOA&riu=http%3a%2f%2f3.bp.blogspot.com%2f_f72jjy8828M%2fTBD7IqBJdZI%2fAAAAAAAAAnI%2fGIYVg4o8jws%2fs1600%2fLemonade.jpg&ehk=Vn1UKpf15fWDLY0q9S5xmZYIWhQ1JF98i2hzIc5JX3g%3d&risl=&pid=ImgRaw&r=0" alt="Lemonade" class="menu-img">
+            <h3>Lemonade</h3>
+            <p>Homemade lemonade with a sweet and sour flavor.</p>
+            <p class="price">$2.99</p>
+        </div>
+        <div class="menu-item" data-category="burgers">
+            <img src="https://th.bing.com/th/id/R.6f5d95826f4f5e9a0b865987597179b3?rik=eVH94SKiGt6wYA&pid=ImgRaw&r=0" alt="Veggie Burger" class="menu-img">
+            <h3>Veggie Burger</h3>
+            <p>A hearty veggie patty with fresh vegetables and a savory sauce.</p>
+            <p class="price">$5.49</p>
+        </div>
+        <div class="menu-item" data-category="sides">
+            <img src="https://th.bing.com/th/id/R.d268d49997dbc593e87cf0faffeb46a8?rik=%2fa74ZRgCGN2oQw&pid=ImgRaw&r=0" alt="Garlic Bread" class="menu-img">
+            <h3>Garlic Bread</h3>
+            <p>Toasted garlic bread with a buttery, savory flavor.</p>
+            <p class="price">$2.49</p>
+        </div>
+        <div class="menu-item" data-category="beverages">
+            <img src="https://th.bing.com/th/id/R.41e5b2574ff724f359b38aec41aebe94?rik=gxzuMO9BitTJpw&pid=ImgRaw&r=0" alt="Milkshake" class="menu-img">
+            <h3>Milkshake</h3>
+            <p>A creamy milkshake available in vanilla, chocolate, and strawberry flavors.</p>
+            <p class="price">$3.99</p>
+        </div>
+        <div class="menu-item" data-category="burgers">
+            <img src="https://th.bing.com/th/id/OIP.cjQrc2G-YpJpY8MWEolfbAHaHa?rs=1&pid=ImgDetMain" alt="Spicy Burger" class="menu-img">
+            <h3>Spicy Burger</h3>
+            <p>A spicy burger with jalapeños and a fiery sauce.</p>
+            <p class="price">$6.49</p>
+        </div>
+        <!-- Add more menu items as needed -->
+    </div>
+</section>
+
+<!-- Online Ordering -->
+<section id="order">
+    <h2>Order Online</h2>
+    <div class="order-container">
+        <form id="order-form">
+            <div class="form-group">
+                <label for="item">Select Item:</label>
+                <select id="item" name="item">
+                    <option value="burger">Burger</option>
+                    <option value="fries">Fries</option>
+                    <option value="drink">Drink</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <div class="form-group">
+                <label for="special-request">Special Requests:</label>
+                <textarea id="special-request" name="special-request" rows="4" placeholder="Any special instructions or requests?"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="delivery-option">Delivery or Pickup:</label>
+                <select id="delivery-option" name="delivery-option">
+                    <option value="delivery">Delivery</option>
+                    <option value="pickup">Pickup</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+</section>
+
+
+   <!-- About Us -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Kashmir Fast Food! We pride ourselves on offering delicious and high-quality fast food that brings a taste of tradition and innovation to every bite. Our journey began with a passion for great food and a commitment to exceptional service. Learn more about our story, values, and the talented team behind the scenes.</p>
+    
+    <!-- Story Section -->
+    <div class="story">
+        <h3>Our Story</h3>
+        <p>Founded in [Year], Kashmir Fast Food started with a single idea: to deliver fast food that doesn't compromise on quality. Our founders, inspired by traditional recipes and a love for culinary experimentation, have created a menu that blends classic flavors with modern twists. Our mission is to make every meal an experience to remember, with fresh ingredients and a dedication to excellence.</p>
+        <img src="https://th.bing.com/th/id/R.266d92fb54b9a603b896b0812180ad53?rik=N8LeeWHT2a9tjw&pid=ImgRaw&r=0" alt="Our Story">
+    </div>
+
+    <!-- Values Section -->
+    <div class="values">
+        <h3>Our Values</h3>
+        <ul>
+            <li><strong>Quality:</strong> We use the freshest ingredients to ensure every dish is of the highest standard.</li>
+            <li><strong>Customer Service:</strong> Our team is dedicated to providing exceptional service with a smile.</li>
+            <li><strong>Innovation:</strong> We continuously update our menu with exciting new items and flavors.</li>
+            <li><strong>Community:</strong> We are committed to supporting local communities and sustainable practices.</li>
+        </ul>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team">
+        <h3>Meet Our Team</h3>
+        <div class="team-member">
+            <img src="https://th.bing.com/th/id/OIP.xLgSfiPI8kldpAdWxFL3NwHaGU?rs=1&pid=ImgDetMain" alt="John Doe" class="team-img">
+            <div class="team-info">
+                <p><strong>John Doe</strong> - Founder</p>
+                <p>John has been the driving force behind Kashmir Fast Food, combining his love for food with a vision for quality and innovation.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://th.bing.com/th/id/OIP.Eqvv0BxEZA0GsC2oTwuzLgHaLG?pid=ImgDet&w=474&h=710&rs=1" alt="Jane Smith" class="team-img">
+            <div class="team-info">
+                <p><strong>Jane Smith</strong> - Head Chef</p>
+                <p>Jane leads our kitchen team with creativity and skill, ensuring every dish is prepared to perfection.</p>
+            </div>
+        </div>
+        <!-- Add more team members as needed -->
+    </div>
+</section>
+
+<!-- Contact Us -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" placeholder="Your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Fast Food Lane, Kashmir</p>
+            <p><strong>Phone:</strong> 123-456-7890</p>
+            <p><strong>Email:</strong> contact@kashmirfastfood.com</p>
+        </div>
+        <!-- Google Maps Embed -->
+<div id="map" class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1652112177847!2d-122.4194186846813!3d37.7749292797597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c2f12b79f%3A0x5f54d3886e7d0d5b!2sKashmir%20Fast%20Food!5e0!3m2!1sen!2sus!4v1631549278005!5m2!1sen!2sus"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+</section>
+
+    <!-- Customer Reviews -->
+<section id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="reviews-container">
+        <div class="review">
+            <p>"Great food and fast service!" - Jane Doe</p>
+        </div>
+        <div class="review">
+            <p>"I love their new spicy chicken burger. Highly recommend!" - John Smith</p>
+        </div>
+        <div class="review">
+            <p>"Best fries in town. Always crispy and hot!" - Sarah Lee</p>
+        </div>
+        <!-- Add more reviews as needed -->
+    </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="https://th.bing.com/th/id/OIP.eD7MpRmuCp5oKFlcdoKmuwHaE8?rs=1&pid=ImgDetMain" alt="Food 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://th.bing.com/th/id/OIP.RIS_6IbCLYv1X3bzYW1lmAHaFH?rs=1&pid=ImgDetMain" alt="Food 2">
+        </div>
+        <div class="gallery-item">
+            <img src="https://th.bing.com/th/id/OIP.CnS9hPatNbmkvHlJAsPEpgHaE8?w=2400&h=1600&rs=1&pid=ImgDetMain" alt="Food 3">
+        </div>
+        <div class="gallery-item">
+            <img src="https://th.bing.com/th/id/OIP.Fm88duUb30wxJlxayXUe-wHaE8?rs=1&pid=ImgDetMain" alt="Food 4">
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
+</section>
+
+<!-- Loyalty Program -->
+<section id="loyalty">
+    <h2>Loyalty Program</h2>
+    <p>Join our loyalty program to earn rewards, discounts, and exclusive offers! Collect points with every purchase and redeem them for exciting rewards.</p>
+    <ul>
+        <li>Earn 1 point for every $1 spent</li>
+        <li>Get a free item after 100 points</li>
+        <li>Exclusive discounts and offers</li>
+    </ul>
+    <button class="btn">Sign Up</button>
+</section>
+
+<!-- Blog/News -->
+<section id="blog">
+    <h2>Blog</h2>
+    <article>
+        <h3>New Menu Items</h3>
+        <p>We’ve added some exciting new items to our menu! From spicy chicken wings to gourmet burgers, there's something for everyone. Come and try them out!</p>
+        <a href="#">Read More</a>
+    </article>
+    <article>
+        <h3>Summer Specials</h3>
+        <p>Enjoy our summer specials with refreshing beverages and light bites. Perfect for a summer day out with friends and family.</p>
+        <a href="#">Read More</a>
+    </article>
+    <!-- Add more blog posts as needed -->
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+        <h3>What are your hours of operation?</h3>
+        <p>We are open from 9 AM to 9 PM every day.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Do you offer delivery?</h3>
+        <p>Yes, we offer delivery within a 5-mile radius. Check our delivery page for more details.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Can I customize my order?</h3>
+        <p>Absolutely! You can customize your order through our online ordering system.</p>
+    </div>
+    <!-- Add more FAQ items as needed -->
+</section>
+
+<!-- Privacy Policy & Terms of Service -->
+<section id="privacy">
+    <h2>Privacy Policy & Terms of Service</h2>
+    <div class="privacy-policy">
+        <h3>Privacy Policy</h3>
+        <p>Your privacy is important to us. We collect and use your data to provide you with the best possible service. Please read our full privacy policy for details.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="terms-of-service">
+        <h3>Terms of Service</h3>
+        <p>By using our website, you agree to our terms of service. These terms outline the rules and guidelines for using our site and services.</p>
+        <a href="#">Read More</a>
+    </div>
+</section>
+
+<!-- Social Media Integration -->
+<section id="social">
+    <h2>Follow Us</h2>
+    <p>Stay connected and follow us on social media for the latest updates, special offers, and more!</p>
+    <div class="social-links">
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div id="social-feed" class="social-feed"></div> <!-- Add social media feed here -->
+</section>
+
+<!-- Accessibility Features -->
+<section id="accessibility">
+    <h2>Accessibility</h2>
+    <p>We are committed to making our website accessible to everyone. Use the button below to toggle accessibility options and improve your browsing experience.</p>
+    <button class="btn" onclick="toggleAccessibility()">Toggle Accessibility Options</button>
+</section>
+<!-- Footer -->
+<footer id="footer">
+    <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="footer-section contact-info">
+            <h3>Contact Us</h3>
+            <p>Address: 123 Fast Food Lane, Kashmir</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: <a href="mailto:info@kashmirfastfood.com">info@kashmirfastfood.com</a></p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order Online</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section social-media">
+            <h3>Follow Us</h3>
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="footer-section newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="newsletter-form">
+                <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>COPYRIGHT @2024 - ALL RIGHT RESERVED - CREATED BY AHMED SARWAR</p>
+    </div>
+</footer>
+<script>
+    document.getElementById('privacy').innerHTML = `
+        <div class="privacy-policy">
+            <h3>Privacy Policy</h3>
+            <p>Your data is secure with us. We use encryption and other measures to protect your information.</p>
+        </div>
+        <div class="terms-of-service">
+            <h3>Terms of Service</h3>
+            <p>Please read our terms and conditions carefully before using our website.</p>
+        </div>
+    `;
+</script>
+
+
+    <script src="script.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+</body>
+</html>
